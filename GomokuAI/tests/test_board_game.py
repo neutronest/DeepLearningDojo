@@ -14,7 +14,7 @@ def test_make_move_and_switch_player():
     # Test making a move updates the board and switches current player
     game_board = Board(board_size=9)
     game_board.make_move(2, 3)
-    assert game_board.board[2, 3] == Player.Black
+    assert game_board.board[2, 3] == Player.Black.value
     assert game_board.current_player == Player.White
 
 def test_illegal_move_raises_exception():

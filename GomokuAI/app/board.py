@@ -15,10 +15,16 @@ class Board:
     
     
     def make_move(self, x: int, y: int):
-        raise NotImplementedError
+        if self.board[x, y] != 0:
+            raise ValueError
+        self.board[x, y] = self.current_player.value
+        self.current_player = Player.switch_player(self.current_player)
+        return
     
     def undo_move(self, x: int, y: int):
-        raise NotImplementedError
+        self.board[x, y] = 0
+        self.current_player = Player.switch_player(self.current_player)
+        raise
     
     def get_current_state(self):
         raise NotImplementedError
