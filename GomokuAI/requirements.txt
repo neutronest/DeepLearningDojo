@@ -1,0 +1,23 @@
+# Core deep learning
+torch==2.3.0+cu121
+torchvision==0.18.0+cu121
+torchaudio==2.3.0+cu121
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# Transformers and NLP
+transformers==4.40.1
+datasets==2.19.0
+
+# Plotting
+matplotlib==3.8.4
+
+# Utility
+tqdm==4.66.2
+
+# Distributed training and profiling (optional, useful for DDP/FSDP)
+accelerate==0.29.2
+
+# pytest
+pytest==8.3.5
+
+numpy==2.2.5
